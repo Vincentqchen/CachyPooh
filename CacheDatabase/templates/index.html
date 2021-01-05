@@ -1,0 +1,21 @@
+{% load static %}
+<!doctype html>
+<html>
+
+<head>
+    <title>{% block title %}Home{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+</head>
+
+<body>
+    <!-- Main Content [START] -->
+    <div class='page'">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <!-- Main Content [END] -->
+</body>
+</html>
