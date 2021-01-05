@@ -1,12 +1,8 @@
 from django.db import models
-import os
-
-import google_auth_oauthlib.flow
-import googleapiclient.discovery
-import googleapiclient.errors
 
 class YoutubeCache(models.Model):
-
+    def __str__(self):
+        return "hi"
 class Video(models.Model):
     youtube_cache = models.ForeignKey(YoutubeCache,on_delete=models.CASCADE)
     url = models.CharField(max_length=600, null=False, blank=False)
