@@ -3,6 +3,8 @@
 import os
 import sys
 
+#Scheduler
+from apscheduler.schedulers.background import BackgroundScheduler
 
 def main():
     """Run administrative tasks."""
@@ -16,6 +18,12 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
+
+    #Schedule daily database updates
+    # scheduler = BackgroundScheduler()
+    # scheduler.add_job(train_model, 'interval', hours=3)
+    # scheduler.start()
+
 
 
 if __name__ == '__main__':

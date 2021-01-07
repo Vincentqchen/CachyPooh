@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from catalog import views
 
 urlpatterns = [
-    path('', include('catalog.urls')),
+    #path('', include('catalog.urls')),
     path('admin/', admin.site.urls),
+    path('ytcache/', views.youtubeView, name = 'youtubeView'),
 ]
