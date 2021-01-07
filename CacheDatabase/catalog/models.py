@@ -1,7 +1,5 @@
 from django.db import models
 import os
-import schedule
-import time
 #Google api
 import json
 from googleapiclient.discovery import build
@@ -32,7 +30,9 @@ def ytCacheHelper():
         regionCode="US"
     )
     response = YTrequest.execute()
-    
+
+    YTresponse
+
 #Schedule daily database updates
 scheduler = BackgroundScheduler()
 scheduler.add_job(ytCacheHelper, 'interval', seconds=3)
