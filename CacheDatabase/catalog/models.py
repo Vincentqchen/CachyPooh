@@ -44,7 +44,7 @@ def ytCacheHelper():
         hour = int(date[11:13])
         minute = int(date[14:16])
         date = datetime(year, month, day, hour, minute)
-        # Set up the video model
+        # Set up the video model test
         mostViewedVideo = YTVideo(url='https://www.youtube.com/watch?v='+items[x]['id'], title=snippet['title'], length=length, views=statistics['viewCount'], date=date, ytType='mostPopular')
         mostViewedVideo.save()
 ytCacheHelper()
