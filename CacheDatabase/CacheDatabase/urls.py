@@ -20,5 +20,5 @@ from catalog import views
 urlpatterns = [
     #path('', include('catalog.urls')),
     path('admin/', admin.site.urls),
-    path('ytcache/', views.youtubeView, name = 'youtubeView'),
+    path('', include('catalog.urls')),
 ]

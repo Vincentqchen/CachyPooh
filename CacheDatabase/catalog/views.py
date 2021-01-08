@@ -9,7 +9,7 @@ import googleapiclient.errors
 
 
 # Create your views here.
-def index(request):
+def home(request):
     return render(request, 'home.html', {})
 
 def youtubeView(request):
