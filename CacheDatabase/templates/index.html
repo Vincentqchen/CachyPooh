@@ -11,11 +11,17 @@
 </head>
 
 <body>
+
+    {% include 'navbar.html' %}
+
     <!-- Main Content [START] -->
     <div class='page'">
         {% block content %}
         {% endblock %}
     </div>
     <!-- Main Content [END] -->
+
+    {% include 'footer.html' %}
+
 </body>
 </html>
