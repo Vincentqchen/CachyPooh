@@ -17,7 +17,7 @@
                             <div class="card is-active is-size-4-fullhd has-text-justified has-text-left-fullhd is-light">
                                 <div class="container.is-max-desktop">
                                     <figure class="image is-16by9">
-                                        <iframe class="has-ratio" src="https://www.youtube.com/embed/{{ videos.vid_id }}" allowfullscreen></iframe>
+                                        <iframe class="has-ratio" src="{{ embed }}" allowfullscreen></iframe>
                                     </figure>
                                 </div>
                             </div>
@@ -36,7 +36,8 @@
                                 </header>
                                 <div class="card-content is-hidden">
                                     <div class="content">
-                                        {{ videos.description }}
+                                        No desc for now
+                                        <!-- {{ videos.description }} -->
                                     </div>
                                 </div>
                             </div>
@@ -76,6 +77,7 @@
                     Trending Videos
                 </p>
                 <ul class="menu-list">
+                    <li><a class="is-active" href="">maybe add a thumbnail like how YouTube does it</a></li><br>
                     <li><a class="is-active" href="">maybe add a thumbnail like how YouTube does it</a></li>
                 </ul>
             </aside>

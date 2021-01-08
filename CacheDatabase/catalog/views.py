@@ -10,7 +10,9 @@ import googleapiclient.errors
 
 # Create your views here.
 def home(request):
-    return render(request, 'home.html', {})
+    VideoObject = VideoYT.objects.filter(ytType__contains='mostPopular')[0]
+    embed = 'https://www.youtube.com/embed/'+VideoObject.vidID
+    return render(request, 'home.html', {'videos':VideoObject,'embed':embed})
 
 def youtubeView(request):
     pass

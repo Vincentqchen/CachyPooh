@@ -7,14 +7,15 @@ from googleapiclient.discovery import build
 #Scheduler
 from apscheduler.schedulers.background import BackgroundScheduler
 
-class Test(models.Model):
+class VideoYT(models.Model):
     #youtube_cache = models.ForeignKey(YoutubeCache,on_delete=models.CASCADE)
-    url = models.CharField(max_length=600, null=False, blank=False)
+    vidID = models.CharField(max_length=600, null=False, blank=False)
     title = models.CharField(max_length=600, null=False, blank=False)
     length = models.CharField(max_length=600, null=False, blank=False)
     views = models.IntegerField(null=False, blank=False)
     date = models.DateField(auto_now=False, auto_now_add=False)
     ytType = models.CharField(max_length=30, null=False, blank=False)
+
 # Create your models here.
 def ytCacheHelper():
     youtube = build('youtube','v3',developerKey = 'AIzaSyBVb4q7yTC3-Gx7qAWIvPaeZUnJuUc6HkU')
@@ -45,11 +46,10 @@ def ytCacheHelper():
         minute = int(date[14:16])
         date = datetime(year, month, day, hour, minute)
         # Set up the video model test
-        mostViewedVideo = Test(url='https://www.youtube.com/watch?v='+items[x]['id'], title=snippet['title'], length=length, views=statistics['viewCount'], date=date, ytType='mostPopular')
+        mostViewedVideo = VideoYT(vidID=items[x]['id'], title=snippet['title'], length=length, views=statistics['viewCount'], date=date, ytType='mostPopular')
         mostViewedVideo.save()
-ytCacheHelper()
-print(YTVideo.objects.all())
+# print(YTVideo.objects.all()[0])
 #Schedule daily database updates
 # scheduler = BackgroundScheduler()
-# scheduler.add_job(ytCacheHelper, 'interval', seconds=3)
+# scheduler.add_job(ytCacheHelper, 'cron', hour=0)
 # scheduler.start()
