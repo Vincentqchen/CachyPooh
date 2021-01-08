@@ -7,7 +7,7 @@ from googleapiclient.discovery import build
 #Scheduler
 from apscheduler.schedulers.background import BackgroundScheduler
 
-class YTVideo(models.Model):
+class Test(models.Model):
     #youtube_cache = models.ForeignKey(YoutubeCache,on_delete=models.CASCADE)
     url = models.CharField(max_length=600, null=False, blank=False)
     title = models.CharField(max_length=600, null=False, blank=False)
@@ -45,7 +45,7 @@ def ytCacheHelper():
         minute = int(date[14:16])
         date = datetime(year, month, day, hour, minute)
         # Set up the video model test
-        mostViewedVideo = YTVideo(url='https://www.youtube.com/watch?v='+items[x]['id'], title=snippet['title'], length=length, views=statistics['viewCount'], date=date, ytType='mostPopular')
+        mostViewedVideo = Test(url='https://www.youtube.com/watch?v='+items[x]['id'], title=snippet['title'], length=length, views=statistics['viewCount'], date=date, ytType='mostPopular')
         mostViewedVideo.save()
 ytCacheHelper()
 print(YTVideo.objects.all())

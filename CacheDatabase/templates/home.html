@@ -17,7 +17,7 @@
                             <div class="card is-active is-size-4-fullhd has-text-justified has-text-left-fullhd is-light">
                                 <div class="container.is-max-desktop">
                                     <figure class="image is-16by9">
-                                        <iframe class="has-ratio" src="https://www.youtube.com/embed/duqFO4wony8" allowfullscreen></iframe>
+                                        <iframe class="has-ratio" src="https://www.youtube.com/embed/{{ videos.id }}" allowfullscreen></iframe>
                                     </figure>
                                 </div>
                             </div>
@@ -27,8 +27,8 @@
                         <div class="container">
                             <div class="card is-fullwidth">
                                 <header class="card-header">
-                                    <a class="card-header-title" href="https://youtu.be/duqFO4wony8">
-                                        10 LEVELS OF GUITAR| (feat. Ichika Nito - I miss you) Cover'
+                                    <a class="card-header-title" href="{{ videos.url }}">
+                                        {{ videos.title }}
                                     </a>
                                     <a class="card-header-icon card-toggle">
                                         <i class="fa fa-angle-down"></i>
@@ -36,26 +36,7 @@
                                 </header>
                                 <div class="card-content is-hidden">
                                     <div class="content">
-                                        Ichika's offical website : https://nitomusic.bigcartel.com/
-                                        <br><br>
-                                        Few days ago, I watched Ichika's 10 LEVELS OF GUITAR
-                                        <br><br>
-                                        and was very impressed, so I copied it!
-                                        <br><br>
-                                        Indeed, Ichika's playing is really hard T.T
-                                        <br><br>
-                                        The song used here is Ichika's I miss you!
-                                        <br><br>
-                                        Please Enjoy!!
-                                        <br><br>
-                                        Gears.<br>
-                                        T's Arc-STD<br>
-                                        RME Fireface UFX<br>
-                                        Kemper Profiling Amplifier
-                                        <br><br>
-                                        mylist/40295237<br>
-                                        Youtube: https://www.youtube.com/channel/UCH1D...<br>
-                                        Twitter: @xlezzy
+                                        {{ videos.description }}
                                     </div>
                                 </div>
                             </div>
@@ -73,7 +54,15 @@
                                     </a>
                                 </header>
                                 <div class="card-content is-hidden">
-                                    stuff
+                                    Stuff... I'll make this look nice later.
+                                    <br>
+                                    Length - {{ videos.length }}
+                                    <br>
+                                    Views - {{ videos.views}}
+                                    <br>
+                                    Date - {{ videos.date}}
+                                    <br>
+                                    ytType - {{ videos.ytType}}
                                 </div>
                             </div>
                         </div>
