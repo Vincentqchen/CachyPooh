@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'CacheDatabase.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'CacheDatabase',
-        'USER': 'postgres',
-        'PASSWORD': 'Password',
+        'USER': 'outstrike',
+        'PASSWORD': 'Cacheypooh1',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
