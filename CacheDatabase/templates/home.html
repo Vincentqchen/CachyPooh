@@ -4,18 +4,30 @@
 <!-- put main code here -->
 {% block content %}
 
-<section class="section is-full-fullhd">
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
+
+<!-- top -->
+<section class="section">
     <div class="container">
         <div class="tile is-ancestor">
-            <div class="tile is-6">
-                <article class="tile is-child notification is-success">
-                    <p class="is-size-1-fullhd">CachyPooh</p>
-                    <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nibh nisl, mollis at gravida et, vulputate in
-                    urna. Sed molestie diam in sapien suscipit accumsan. Sed in nisl sit amet sem maximus facilisis nec sed mi. Nunc
-                    pellentesque libero ut nibh vulputate, eu pharetra justo luctus. Orci varius natoque penatibus et magnis dis parturient
-                    montes, nascetur ridiculus mus. Curabitur vulputate accumsan urna vel porta. Sed malesuada orci magna, eget commodo nisl
-                    convallis ut. Donec blandit erat suscipit placerat mollis. Fusce ultrices ante sed dui efficitur, in sollicitudin ligula
-                    ullamcorper. Nunc est velit, suscipit lobortis arcu quis, mattis ultrices mi. Suspendisse potenti.</p>
+            <div class="tile is-4">
+                <article class="tile is-child ">
+                    <p class="is-size-1-fullhd has-text-weight-bold	">CachyPooh</p>
+                    <p class="is-size-4-fullhd has-text-weight-semibold	">
+                        Explore through the latest trends in
+                        <a href="https://www.youtube.com">
+                            YouTube,
+                        </a>                        
+                        <a href="https://www.twitter.com">
+                            Twitter,
+                        </a>
+                        <a href="https://www.facebook.com">
+                            Facebook,
+                        </a>
+                        <br>
+                        &lt;insert any name&gt; <i class="far fa-smile-wink"></i>
+                    </p>
                 </article>
             </div>
             <div class="tile">
@@ -25,21 +37,132 @@
     </div>
 </section>
 
+<!-- middle -->
 <div class="container is-fluid">
     <div class="columns is-one-third">
         <div class="column">
             <button class="button is-large is-fullwidth is-danger">YouTube</button>
         </div>
         <div class="column">
-            <button class="button is-large is-fullwidth is-primary">Large</button>
+            <button class="button is-large is-fullwidth is-info">Twitter</button>
         </div>
         <div class="column">
-            <button class="button is-large is-fullwidth is-primary">Large</button>
+            <button class="button is-large is-fullwidth is-link">Facebook</button>
+        </div>
+    </div>
+    <div class="columns is-one-third">
+        <div class="column">
+            <button class="button is-large is-fullwidth is-warning">Reddit</button>
         </div>
         <div class="column">
-            <button class="button is-large is-fullwidth is-primary">Large</button>
+            <button class="button is-large is-fullwidth is-black">MySpace</button>
+        </div>
+        <div class="column">
+            <button class="button is-large is-fullwidth is-dark">Giphy</button>
+        </div>
+    </div>
+    <div class="columns is-one-third">
+        <div class="column">
+            <button class="button is-large is-fullwidth is-danger">YouTube</button>
+        </div>
+        <div class="column">
+            <button class="button is-large is-fullwidth is-info">Twitter</button>
+        </div>
+        <div class="column">
+            <button class="button is-large is-fullwidth is-link">Facebook</button>
+        </div>
+    </div>
+    <div class="columns is-one-third">
+        <div class="column">
+            <button class="button is-large is-fullwidth is-warning">Reddit</button>
+        </div>
+        <div class="column">
+            <button class="button is-large is-fullwidth is-black">MySpace</button>
+        </div>
+        <div class="column">
+            <button class="button is-large is-fullwidth is-dark">Giphy</button>
         </div>
     </div>
 </div>
+<br>
 
+<nav class="level is-mobile">
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="heading">Videos</p>
+            <p class="title">12398</p>
+        </div>
+    </div>
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="heading">Tweets</p>
+            <p class="title">12354233</p>
+        </div>
+    </div>
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="heading">Facebook Posts</p>
+            <p class="title">23256234</p>
+        </div>
+    </div>
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="heading">More Statistics</p>
+            <p class="title">5678765</p>
+        </div>
+    </div>
+</nav>
+
+<!-- bottom -->
+<section class="section" id="contributors">
+    <div class="container is-max-desktop">
+        <div class="tile is-ancestor">
+            <!-- vincent -->
+            <div class="tile is-half">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img src="static/img/vincent.jpeg" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content has-text-centered	">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">Vincent Chen</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <strong>Backend Developer</strong>
+                            <br>
+                            <a href="http://github.com/vincentqchen">@vincentqchen</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tile is-half">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img src="static/img/nishant.jpg"
+                                alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content has-text-centered	">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">Nishant Srivastava</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <strong>Frontend Developer</strong>
+                            <br>
+                            <a href="http://github.com/nishi7409">@nishi7409</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
