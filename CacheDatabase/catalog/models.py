@@ -18,6 +18,7 @@ class VideoYT(models.Model):
 
 # Create your models here.
 def ytCacheHelper():
+    print('Caching daily YT data')
     youtube = build('youtube','v3',developerKey = 'AIzaSyBVb4q7yTC3-Gx7qAWIvPaeZUnJuUc6HkU')
 
     #Most popular videos in the us
@@ -45,11 +46,11 @@ def ytCacheHelper():
         hour = int(date[11:13])
         minute = int(date[14:16])
         date = datetime(year, month, day, hour, minute)
-        # Set up the video model test
+        # Set up the video model 
         mostViewedVideo = VideoYT(vidID=items[x]['id'], title=snippet['title'], length=length, views=statistics['viewCount'], date=date, ytType='mostPopular')
+        VideoYT.objects.filter(vidID__contains=items[x]['id'], title__contains=snippet['title'], length__contains=length, views__contains=statistics['viewCount'], date__contains=date, ytType__contains='mostPopular')
         mostViewedVideo.save()
-# print(YTVideo.objects.all()[0])
 #Schedule daily database updates
-# scheduler = BackgroundScheduler()
-# scheduler.add_job(ytCacheHelper, 'cron', hour=0)
-# scheduler.start()
+scheduler = BackgroundScheduler()
+scheduler.add_job(ytCacheHelper, 'cron', hour=0)
+scheduler.start()
