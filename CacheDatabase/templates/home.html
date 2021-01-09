@@ -4,83 +4,40 @@
 <!-- put main code here -->
 {% block content %}
 
-<script type="text/javascript" src="{% static '/scripts/home.js' %}"></script>
-
-<br>
-<div class="container">
-    <div class="columns">
-        <div class="column is-9">
-            <div class="columns">
-                <div class="column">
-                    <div class="card-table">
-                        <div class="container">
-                            <div class="card is-active is-size-4-fullhd has-text-justified has-text-left-fullhd is-light">
-                                <div class="container.is-max-desktop">
-                                    <figure class="image is-16by9">
-                                        <iframe class="has-ratio" src="{{ embed }}" allowfullscreen></iframe>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-table">
-                        <div class="container">
-                            <div class="card is-fullwidth">
-                                <header class="card-header">
-                                    <a class="card-header-title" href="{{ videos.url }}">
-                                        {{ videos.title }}
-                                    </a>
-                                    <a class="card-header-icon card-toggle">
-                                        <i class="fa fa-angle-down"></i>
-                                    </a>
-                                </header>
-                                <div class="card-content is-hidden">
-                                    <div class="content">
-                                        No desc for now
-                                        <!-- {{ videos.description }} -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-table">
-                        <div class="container">
-                            <div class="card is-fullwidth">
-                                <header class="card-header">
-                                    <a class="card-header-title">
-                                        Video Statistics
-                                    </a>
-                                    <a class="card-header-icon card-toggle">
-                                        <i class="fa fa-angle-down"></i>
-                                    </a>
-                                </header>
-                                <div class="card-content is-hidden">
-                                    Stuff... I'll make this look nice later.
-                                    <br>
-                                    Length - {{ videos.length }}
-                                    <br>
-                                    Views - {{ videos.views}}
-                                    <br>
-                                    Date - {{ videos.date}}
-                                    <br>
-                                    ytType - {{ videos.ytType}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<section class="section is-full-fullhd">
+    <div class="container">
+        <div class="tile is-ancestor">
+            <div class="tile is-6">
+                <article class="tile is-child notification is-success">
+                    <p class="is-size-1-fullhd">CachyPooh</p>
+                    <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nibh nisl, mollis at gravida et, vulputate in
+                    urna. Sed molestie diam in sapien suscipit accumsan. Sed in nisl sit amet sem maximus facilisis nec sed mi. Nunc
+                    pellentesque libero ut nibh vulputate, eu pharetra justo luctus. Orci varius natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. Curabitur vulputate accumsan urna vel porta. Sed malesuada orci magna, eget commodo nisl
+                    convallis ut. Donec blandit erat suscipit placerat mollis. Fusce ultrices ante sed dui efficitur, in sollicitudin ligula
+                    ullamcorper. Nunc est velit, suscipit lobortis arcu quis, mattis ultrices mi. Suspendisse potenti.</p>
+                </article>
+            </div>
+            <div class="tile">
+                <img src="static/img/home_astronaut.svg" alt="Kiwi standing on oval">
             </div>
         </div>
-        <div class="column is-2 ">
-            <aside class="menu is-hidden-mobile">
-                <p class="menu-label">
-                    Trending Videos
-                </p>
-                <ul class="menu-list">
-                    <li><a class="is-active" href="">maybe add a thumbnail like how YouTube does it</a></li><br>
-                    <li><a class="is-active" href="">maybe add a thumbnail like how YouTube does it</a></li>
-                </ul>
-            </aside>
+    </div>
+</section>
+
+<div class="container is-fluid">
+    <div class="columns is-one-third">
+        <div class="column">
+            <button class="button is-large is-fullwidth is-danger">YouTube</button>
+        </div>
+        <div class="column">
+            <button class="button is-large is-fullwidth is-primary">Large</button>
+        </div>
+        <div class="column">
+            <button class="button is-large is-fullwidth is-primary">Large</button>
+        </div>
+        <div class="column">
+            <button class="button is-large is-fullwidth is-primary">Large</button>
         </div>
     </div>
 </div>

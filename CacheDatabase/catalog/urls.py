@@ -10,5 +10,13 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('', views.home, name="home"),
+    path('videos', views.videos, name='videos'),
 ]
+
+
+def demo(request):
+    request = request
+    template = "home/<media>.html"
+    data = {}
+    return render(request, template, data)

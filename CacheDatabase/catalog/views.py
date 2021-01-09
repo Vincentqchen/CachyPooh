@@ -9,13 +9,16 @@ import googleapiclient.errors
 
 
 # Create your views here.
-def home(request):
-    VideoObject = VideoYT.objects.filter(ytType__contains='mostPopular')[0]
-    embed = 'https://www.youtube.com/embed/'+VideoObject.vidID
-    return render(request, 'home.html', {'videos':VideoObject,'embed':embed})
+def videos(request):
+    # VideoObject = VideoYT.objects.filter(ytType__contains='mostPopular')[0]
+    # embed = 'https://www.youtube.com/embed/'+VideoObject.vidID
+    # return render(request, 'home.html', {'videos':VideoObject,'embed':embed})
+    return render(request, 'videos.html', {})
 
-def youtubeView(request):
-    pass
+
+
+def home(request):
+    return render(request, 'home.html', {})
 
 
     #return render(request, '')
