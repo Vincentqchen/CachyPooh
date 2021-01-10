@@ -27,8 +27,8 @@
                         <div class="container">
                             <div class="card is-fullwidth">
                                 <header class="card-header">
-                                    <a class="card-header-title" href="{{ videos.url }}">
-                                        {{ videos.title }}
+                                    <a class="card-header-title" href="{{ video.url }}">
+                                        {{ video.title }}
                                     </a>
                                     <a class="card-header-icon card-toggle">
                                         <i class="fa fa-angle-down"></i>
@@ -36,7 +36,7 @@
                                 </header>
                                 <div class="card-content is-hidden">
                                     <div class="content">
-                                        No desc for now
+                                        {{ video.desc }}
                                         <!-- {{ videos.description }} -->
                                     </div>
                                 </div>
@@ -57,13 +57,13 @@
                                 <div class="card-content is-hidden">
                                     Stuff... I'll make this look nice later.
                                     <br>
-                                    Length - {{ videos.length }}
+                                    Length - {{ video.length }}
                                     <br>
-                                    Views - {{ videos.views}}
+                                    Views - {{ video.views}}
                                     <br>
-                                    Date - {{ videos.date}}
+                                    Date - {{ video.date}}
                                     <br>
-                                    ytType - {{ videos.ytType}}
+                                    ytType - {{ video.ytType}}
                                 </div>
                             </div>
                         </div>
@@ -74,11 +74,12 @@
         <div class="column is-2 ">
             <aside class="menu is-hidden-mobile">
                 <p class="menu-label">
-                    Trending Videos
+                    Trendy Videos
                 </p>
                 <ul class="menu-list">
-                    <li><a class="is-active" href="">maybe add a thumbnail like how YouTube does it</a></li><br>
-                    <li><a class="is-active" href="">maybe add a thumbnail like how YouTube does it</a></li>
+                    {% for vid in videos %}
+                    <li><a class="is-active" href="">{{ vid.title }}</a></li><br>
+                    {% endfor %}
                 </ul>
             </aside>
         </div>

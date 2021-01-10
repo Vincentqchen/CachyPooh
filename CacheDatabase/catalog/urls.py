@@ -14,7 +14,7 @@ urlpatterns = [
     # path('videos', views.videos, name='videos'),
     path('', views.home, name='home'),
     path('<media>/', views.media, name = 'media'),
-    path('<media>/<category>/<vid_id>', views.finalVidView, name = 'finalVidView')
+    path('<media>/<category>/<vid_id>', views.finalView, name = 'finalView')
 ]
 
 
