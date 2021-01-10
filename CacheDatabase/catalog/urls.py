@@ -16,10 +16,3 @@ urlpatterns = [
     path('<media>/', views.media, name = 'media'),
     path('<media>/<category>/<vid_id>', views.finalView, name = 'finalView')
 ]
-
-
-def demo(request):
-    request = request
-    template = "home/<media>.html"
-    data = {}
-    return render(request, template, data)
