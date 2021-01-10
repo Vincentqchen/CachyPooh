@@ -41,46 +41,13 @@
 <div class="container is-fluid">
     <div class="columns is-one-third">
         <div class="column">
-            <button class="button is-large is-fullwidth is-danger">YouTube</button>
+            <a href="{% url 'media' 'youtube' %}"><button class="button is-large is-fullwidth is-danger">YouTube</button></a>
         </div>
         <div class="column">
-            <button class="button is-large is-fullwidth is-info">Twitter</button>
+            <a href="{% url 'media' 'twitter' %}"><button class="button is-large is-fullwidth is-info">Twitter</button></a>
         </div>
         <div class="column">
-            <button class="button is-large is-fullwidth is-link">Facebook</button>
-        </div>
-    </div>
-    <div class="columns is-one-third">
-        <div class="column">
-            <button class="button is-large is-fullwidth is-warning">Reddit</button>
-        </div>
-        <div class="column">
-            <button class="button is-large is-fullwidth is-black">MySpace</button>
-        </div>
-        <div class="column">
-            <button class="button is-large is-fullwidth is-dark">Giphy</button>
-        </div>
-    </div>
-    <div class="columns is-one-third">
-        <div class="column">
-            <button class="button is-large is-fullwidth is-danger">YouTube</a></button>
-        </div>
-        <div class="column">
-            <button class="button is-large is-fullwidth is-info">Twitter</button>
-        </div>
-        <div class="column">
-            <button class="button is-large is-fullwidth is-link">Facebook</button>
-        </div>
-    </div>
-    <div class="columns is-one-third">
-        <div class="column">
-            <button class="button is-large is-fullwidth is-warning">Reddit</button>
-        </div>
-        <div class="column">
-            <button class="button is-large is-fullwidth is-black">MySpace</button>
-        </div>
-        <div class="column">
-            <button class="button is-large is-fullwidth is-dark">Giphy</button>
+            <a href="{% url 'media' 'facebook' %}"><button class="button is-large is-fullwidth is-link">Facebook</button></a>
         </div>
     </div>
 </div>
