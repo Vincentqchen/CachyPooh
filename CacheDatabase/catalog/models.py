@@ -76,7 +76,6 @@ def ytHelp(YTrequest, category):
             mostViewedVideo = VideoYT(vidID=items[x]['id'], desc=snippet['description'], title=snippet['title'], length=length, views=statistics['viewCount'], date=date, ytType=category)
             mostViewedVideo.save()
 #Schedule daily database updates
-ytCacheHelper()
 scheduler = BackgroundScheduler()
 scheduler.add_job(ytCacheHelper, 'cron', hour=18, minute=58)
 scheduler.start()
