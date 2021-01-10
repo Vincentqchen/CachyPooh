@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" />
 </head>
 
 <body>
@@ -15,13 +16,12 @@
     {% include 'navbar.html' %}
 
     <!-- Main Content [START] -->
-    <div class='page'">
+    <div class='src'>
         {% block content %}
         {% endblock %}
     </div>
     <!-- Main Content [END] -->
 
     {% include 'footer.html' %}
-
 </body>
 </html>

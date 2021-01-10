@@ -10,7 +10,7 @@ import googleapiclient.errors
 
 # Create your views here.
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'home.html', {})
 
 def media(request, media):
     if media == 'youtube':
@@ -22,6 +22,8 @@ def media(request, media):
         pass
     elif media == 'instagram':
         pass
+    
+    return render(request, 'index.html', {})
 
 def finalView(request, media, category, vid_id):
     # If the media page is on youtube
