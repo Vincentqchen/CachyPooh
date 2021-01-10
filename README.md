@@ -11,7 +11,7 @@ CacheDatabase holds top trending news/entertainment tidbits so that users can fi
 - `createuser -P` Will give u prompts to answer
 - `psql`
 - `GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;` Replace mydb with your db name and myuser with your username
-- You now have a postgres database set up :)
+- You now have a postgres database set up :) Just make sure to update the settings file with your database info
 # Starting database
 - `sudo su - postgres`
 - `psql`
