@@ -14,9 +14,9 @@ def home(request):
 
 def media(request, media):
     if media == 'youtube':
-        gamingVids = VideoYT.objects.filter(ytType__contains='Gaming')
-        sportVids = VideoYT.objects.filter(ytType__contains='Sport')
-        musicVids = VideoYT.objects.filter(ytType__contains='Music')
+        gamingVids = VideoYT.objects.filter(ytType__icontains='Gaming')
+        sportVids = VideoYT.objects.filter(ytType__icontains='Sport')
+        musicVids = VideoYT.objects.filter(ytType__icontains='Music')
         return render(request, 'youtube.html', {'gamingVids':gamingVids,'sportVids':sportVids,'musicVids':musicVids})
     elif media == 'twitter':
         pass
