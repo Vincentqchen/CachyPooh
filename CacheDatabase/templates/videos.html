@@ -78,7 +78,7 @@
                 </p>
                 <ul class="menu-list">
                     {% for vid in videos %}
-                    <li><a class="is-active" href="">{{ vid.title }}</a></li><br>
+                    <li><a class="is-active" href="{% url 'finalView' media='youtube' category=vid.ytType vid_id=vid.vidID %}">{{ vid.title }}</a></li><br>
                     {% endfor %}
                 </ul>
             </aside>
