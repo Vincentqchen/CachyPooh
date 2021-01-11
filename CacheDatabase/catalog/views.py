@@ -6,7 +6,7 @@ import json
 import google_auth_oauthlib.flow
 import googleapiclient.discovery
 import googleapiclient.errors
-
+import datetime
 
 # Create your views here.
 def home(request):
@@ -27,14 +27,19 @@ def media(request, media):
     return render(request, 'index.html', {})
 
 def finalView(request, media, category, vid_id):
+    test = VideoYT.objects.all()
+    for n in test:
+        print(str(n.date)+" Category "+n.ytType)
     # If the media page is on youtube
     if media == 'youtube':
         # Single video to display
         VideoObject = VideoYT.objects.filter(vidID__contains=vid_id)[0]
-        # All videos under the category and date of the video
-        print(VideoObject.date)
-        datetime = VideoObject.date
-        VideoObjects = VideoYT.objects.filter(ytType__icontains=category, date__contains=datetime)
+        # All videos under the category and date +/- of the video
+        startDate = VideoObject.date - datetime.timedelta(days=1)
+        endDate = VideoObject.date + datetime.timedelta(days=1)
+        print("Start: "+str(startDate))
+        print("End: "+str(endDate))
+        VideoObjects = VideoYT.objects.filter(ytType__icontains=category, date__range=(startDate,endDate))
         embed = 'https://www.youtube.com/embed/'+VideoObject.vidID
         print('length: '+str(len(VideoObjects)))
 
