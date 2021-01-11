@@ -33,8 +33,9 @@ def finalView(request, media, category, vid_id):
         # All videos under the category and date of the video
         print(VideoObject.date)
         datetime = VideoObject.date
-        VideoObjects = VideoYT.objects.filter(ytType__contains=category, date__contains=datetime)
+        VideoObjects = VideoYT.objects.filter(ytType__icontains=category, date__contains=datetime)
         embed = 'https://www.youtube.com/embed/'+VideoObject.vidID
+        print('length: '+str(len(VideoObjects)))
         return render(request, 'videos.html', {'video':VideoObject,'embed':embed, 'videos':VideoObjects})
     elif media == 'twitter':
         pass
