@@ -5,6 +5,7 @@
 {% block content %}
 
 <script type="text/javascript" src="{% static '/scripts/videos.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/trending_column.css' %}" />
 
 <br>
 <div class="container">
@@ -71,8 +72,8 @@
                 </div>
             </div>
         </div>
-        <div class="column is-2 ">
-            <aside class="menu is-hidden-mobile">
+        <div class="column is-2" id="trending_column">
+            <article class="menu is-hidden-mobile">
                 <p class="menu-label">
                     Trendy Videos
                 </p>
@@ -90,7 +91,7 @@
                     <br>
                     {% endfor %}
                 </ul>
-            </aside>
+            </article>
         </div>
     </div>
 </div>
