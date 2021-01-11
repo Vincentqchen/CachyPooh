@@ -17,7 +17,8 @@ def media(request, media):
         gamingVids = VideoYT.objects.filter(ytType__icontains='Gaming')
         sportVids = VideoYT.objects.filter(ytType__icontains='Sport')
         musicVids = VideoYT.objects.filter(ytType__icontains='Music')
-        return render(request, 'youtube.html', {'gamingVids':gamingVids,'sportVids':sportVids,'musicVids':musicVids})
+        data = {'gamingVids':gamingVids, 'sportVids':sportVids, 'musicVids':musicVids, }
+        return render(request, 'youtube.html', data)
     elif media == 'twitter':
         pass
     elif media == 'instagram':
@@ -36,7 +37,17 @@ def finalView(request, media, category, vid_id):
         VideoObjects = VideoYT.objects.filter(ytType__icontains=category, date__contains=datetime)
         embed = 'https://www.youtube.com/embed/'+VideoObject.vidID
         print('length: '+str(len(VideoObjects)))
-        return render(request, 'videos.html', {'video':VideoObject,'embed':embed, 'videos':VideoObjects})
+
+        current_path = ""
+        for x in request.build_absolute_uri().split(media+"/"+category+"/"):
+            current_path += x
+            break
+
+        current_path = current_path+media+"/"+category+"/"
+
+        data = {'video': VideoObject, 'embed': embed, 'videos': VideoObjects, 'current_path': current_path}
+
+        return render(request, 'videos.html', data)
     elif media == 'twitter':
         pass
     elif media == 'instagram':
