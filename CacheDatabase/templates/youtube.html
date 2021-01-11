@@ -26,12 +26,12 @@
             <div class="card">
                 <div class="card-image">
                     <figure class="image is-4by3">
-                        <img src="https://i.pinimg.com/originals/ab/45/bb/ab45bb4451536652faca51ae4f42d5dd.gif">
+                        <img src="https://pa1.narvii.com/5939/1adf4c578ad4a01042d746649cd11fd0bc677633_hq.gif">
                     </figure>
                 </div>
                 <div class="card-content">
                     <div class="content has-text-centered is-size-4">
-                        <a href="{% url 'finalView' media='youtube' category='music' vid_id='asdfklja'%}">Music</a>
+                        <a href="{% url 'finalView' media='youtube' category='gaming' vid_id=gamingVids.0.vidID %}">Gaming</a>
                     </div>
                 </div>
             </div>
@@ -40,15 +40,26 @@
             <div class="card">
                 <div class="card-image">
                     <figure class="image is-4by3">
-                        <img src="https://pa1.narvii.com/5939/1adf4c578ad4a01042d746649cd11fd0bc677633_hq.gif">
+                        <img src="https://cdn.dribbble.com/users/1161944/screenshots/10945992/media/4d87f6f942403ccd30343217fbb71c2b.gif">
                     </figure>
                 </div>
                 <div class="card-content">
                     <div class="content has-text-centered is-size-4">
-                            <ul>
-                                <li> {{ gamingVids.0.vidID }} </li>
-                            </ul>
-                        <a href="{% url 'finalView' media='youtube' category='gamingVids' vid_id='{{ gamingVids.0.vidID }}'%}">Gaming</a>
+                        <a href="{% url 'finalView' media='youtube' category='sports' vid_id=sportVids.0.vidID %}">Sports</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://i.pinimg.com/originals/ab/45/bb/ab45bb4451536652faca51ae4f42d5dd.gif">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content has-text-centered is-size-4">
+                        <a href="{% url 'finalView' media='youtube' category='music' vid_id=musicVids.0.vidID %}">Music</a>
                     </div>
                 </div>
             </div>
