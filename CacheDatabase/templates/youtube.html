@@ -45,7 +45,10 @@
                 </div>
                 <div class="card-content">
                     <div class="content has-text-centered is-size-4">
-                        <a href="{% url 'finalView' media='youtube' category='music' vid_id='asdfklja'%}">Gaming</a>
+                            <ul>
+                                <li> {{ gamingVids.0.vidID }} </li>
+                            </ul>
+                        <a href="{% url 'finalView' media='youtube' category='gamingVids' vid_id='{{ gamingVids.0.vidID }}'%}">Gaming</a>
                     </div>
                 </div>
             </div>
